@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Mobil uyumluluk -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Travel | Turlar</title>
+    <!-- Ana stil dosyası -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Üst menü -->
+    <header class="topbar">
+        <div class="container nav">
+            <!-- Marka/Logo -->
+            <a href="index.html">
+                <div class="brand">Aurora Travel</div>
+            </a>
+
+            <!-- Navigasyon linkleri -->
+            <nav class="menu" id="menu">
+                <a class="active" href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a href="tours.html">Turlar</a>
+                <a href="hotels.html">Otel & Konaklama</a>
+                <a href="booking.html">Rezervasyon</a>
+                <a href="gallery.html">Galeri</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="faq.html">SSS</a>
+
+            </nav>
+
+            <!-- Mobil menü butonu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+
+            <!-- YURTICI: Türkiye içi turlar -->
+            <section id="yurtici" style="margin-top:18px;">
+                <div class="section-head">
+                    <div>
+                        <h3>Yurtiçi Turlar</h3>
+                        <p class="muted">Doğa, deniz ve kültür rotaları.</p>
+                    </div>
+                </div>
+
+                <!-- Tur kartları grid yapısı -->
+                <div class="grid cols-3">
+                    <!-- Kapadokya -->
+                    <article class="tour-card card">
+                        <!-- Kart görseli -->
+                        <div class="tour-img" style="background-image:url('assets/img/tour_kapadokya.jpg')"></div>
+                        <div class="tour-body">
+                            <!-- Süre + fiyat -->
+                            <div class="tour-top">
+                                <span class="badge">3 Gece</span>
+                                <span class="price">₺7.900</span>
+                            </div>
+                            <h3>Kapadokya Turu</h3>
+                            <p class="muted">Balon turu, vadi yürüyüşleri, gün batımı.</p>
+
+                            <!-- Kart aksiyonları -->
+                            <div class="tour-actions">
+                                <a class="btn" href="tour-detail.html?id=kapadokya">Detaya Git</a>
+                                <a class="btn ghost" href="booking.html">Rezervasyon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Karadeniz -->
+                    <article class="tour-card card">
+                        <div class="tour-img" style="background-image:url('assets/img/tour_karadeniz.jpg')"></div>
+                        <div class="tour-body">
+                            <div class="tour-top">
+                                <span class="badge">4 Gece</span>
+                                <span class="price">₺9.500</span>
+                            </div>
+                            <h3>Karadeniz Yaylalar Turu</h3>
+                            <p class="muted">Ayder, Uzungöl, yayla havası ve bol fotoğraf.</p>
+
+                            <div class="tour-actions">
+                                <a class="btn" href="tour-detail.html?id=karadeniz">Detaya Git</a>
+                                <a class="btn ghost" href="booking.html">Rezervasyon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kaş -->
+                    <article class="tour-card card">
+                        <div class="tour-img" style="background-image:url('assets/img/tour_kas.jpg')"></div>
+                        <div class="tour-body">
+                            <div class="tour-top">
+                                <span class="badge">2 Gece</span>
+                                <span class="price">₺6.400</span>
+                            </div>
+                            <h3>Kaş – Kalkan Turu</h3>
+                            <p class="muted">Koylar, tekne turu, sakin bir kaçamak.</p>
+
+                            <div class="tour-actions">
+                                <a class="btn" href="tour-detail.html?id=kas">Detaya Git</a>
+                                <a class="btn ghost" href="booking.html">Rezervasyon</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- YURTDISI: Avrupa/ada turları -->
+            <section id="yurtdisi" style="margin-top:26px;">
+                <div class="section-head">
+                    <div>
+                        <h3>Yurtdışı Turlar</h3>
+                        <p class="muted">Şehir rotaları ve ada kombinleri.</p>
+                    </div>
+                </div>
+
+                <div class="grid cols-3">
+                    <!-- Roma -->
+                    <article class="tour-card card">
+                        <div class="tour-img" style="background-image:url('assets/img/tour_roma.jpg')"></div>
+                        <div class="tour-body">
+                            <div class="tour-top">
+                                <span class="badge">4 Gece</span>
+                                <span class="price">€499</span>
+                            </div>
+                            <h3>Roma – Floransa</h3>
+                            <p class="muted">Tarih, sanat, İtalyan mutfağı.</p>
+
+                            <div class="tour-actions">
+                                <a class="btn" href="tour-detail.html?id=roma">Detaya Git</a>
+                                <a class="btn ghost" href="booking.html">Rezervasyon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paris -->
+                    <article class="tour-card card">
+                        <div class="tour-img" style="background-image:url('assets/img/tour_paris.jpg')"></div>
+                        <div class="tour-body">
+                            <div class="tour-top">
+                                <span class="badge">5 Gece</span>
+                                <span class="price">€699</span>
+                            </div>
+                            <h3>Paris – Brugge</h3>
+                            <p class="muted">Romantik şehirler, müzeler, nehir turu.</p>
+
+                            <div class="tour-actions">
+                                <a class="btn" href="tour-detail.html?id=paris">Detaya Git</a>
+                                <a class="btn ghost" href="booking.html">Rezervasyon</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Yunan -->
+                    <article class="tour-card card">
+                        <div class="tour-img" style="background-image:url('assets/img/tour_yunan.jpg')"></div>
+                        <div class="tour-body">
+                            <div class="tour-top">
+                                <span class="badge">5 Gece</span>
+                                <span class="price">€589</span>
+                            </div>
+                            <h3>Yunan Adaları</h3>
+                            <p class="muted">Mikonos + Santorini kombini.</p>
+
+                            <div class="tour-actions">
+                                <a class="btn" href="tour-detail.html?id=yunan">Detaya Git</a>
+                                <a class="btn ghost" href="booking.html">Rezervasyon</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Alt bilgi -->
+    <footer class="footer">
+        <div class="container">© 2025 Aurora Travel</div>
+    </footer>
+
+    <script>
+        // Mobil menü aç/kapa
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Mobil uyumluluk -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Travel | Rezervasyon</title>
+    <!-- Ana stil dosyası -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Üst menü -->
+    <header class="topbar">
+        <div class="container nav">
+            <!-- Marka/Logo -->
+            <a href="index.html">
+                <div class="brand">Aurora Travel</div>
+            </a>
+
+            <!-- Navigasyon linkleri -->
+            <nav class="menu" id="menu">
+                <a class="active" href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a href="tours.html">Turlar</a>
+                <a href="hotels.html">Otel & Konaklama</a>
+                <a href="booking.html">Rezervasyon</a>
+                <a href="gallery.html">Galeri</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="faq.html">SSS</a>
+
+            </nav>
+
+            <!-- Mobil menü butonu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Sayfa başlığı -->
+            <h2>Rezervasyon Formu</h2>
+            <p class="muted">Bilgileri doldur, JavaScript doğrulamasıyla kontrol edelim.</p>
+
+            <!-- Form kartı -->
+            <div class="card">
+                <!-- novalidate: varsayılan tarayıcı doğrulamasını kapatır (kontrol JS ile yapılır) -->
+                <form id="bookingForm" novalidate>
+
+                    <!-- Ad/E-posta satırı -->
+                    <div class="form-row">
+                        <div>
+                            <label>Ad Soyad</label>
+                            <input class="input" type="text" id="fullName" placeholder="">
+                            <!-- Hata mesajı alanı -->
+                            <div class="error" id="errName"></div>
+                        </div>
+                        <div>
+                            <label>E-posta</label>
+                            <input class="input" type="email" id="email" placeholder="ornek@mail.com">
+                            <div class="error" id="errEmail"></div>
+                        </div>
+                    </div>
+
+                    <!-- Telefon/Tur satırı -->
+                    <div class="form-row">
+                        <div>
+                            <label>Telefon</label>
+                            <input class="input" type="text" id="phone" placeholder="05xx xxx xx xx">
+                            <div class="error" id="errPhone"></div>
+                        </div>
+                        <div>
+                            <label>Tur Seçimi</label>
+                            <select id="tour" class="input">
+                                <option value="">Seçiniz...</option>
+                                <option value="istanbul">İstanbul Kültür Turu</option>
+                                <option value="yunan">Yunan Adaları</option>
+                                <option value="karadeniz">Karadeniz Yaylalar</option>
+                            </select>
+                            <div class="error" id="errTour"></div>
+                        </div>
+                    </div>
+
+                    <!-- Tarih/Kişi sayısı satırı -->
+                    <div class="form-row">
+                        <div>
+                            <label>Gidiş Tarihi</label>
+                            <input class="input" type="date" id="startDate">
+                            <div class="error" id="errDate"></div>
+                        </div>
+                        <div>
+                            <label>Kişi Sayısı</label>
+                            <input class="input" type="number" id="people" min="1" max="10" value="1">
+                            <div class="error" id="errPeople"></div>
+                        </div>
+                    </div>
+
+                    <!-- Opsiyonel not alanı -->
+                    <label>Not (opsiyonel)</label>
+                    <textarea class="input" id="note" rows="3" placeholder="Örn: Denize yakın otel olsun"></textarea>
+
+                    <!-- KVKK onayı -->
+                    <label style="margin-top:14px;">
+                        <input type="checkbox" id="kvkk"> KVKK / Aydınlatma metnini okudum.
+                    </label>
+                    <div class="error" id="errKvkk"></div>
+
+                    <!-- Form butonları -->
+                    <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+                        <button class="btn" type="submit">Rezervasyonu Gönder</button>
+                        <button class="btn ghost" type="reset">Temizle</button>
+                    </div>
+
+                    <!-- Başarılı işlem mesajı -->
+                    <div class="success" id="successMsg"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Alt bilgi -->
+    <footer class="footer">
+        <div class="container">© 2025 Aurora Travel</div>
+    </footer>
+
+    <!-- Rezervasyon form doğrulama script'i -->
+    <script src="assets/js/booking.js"></script>
+
+    <script>
+        // Mobil menü aç/kapa
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

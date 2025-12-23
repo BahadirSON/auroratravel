@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Mobil uyumluluk için viewport ayarı -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Travel | Blog Detay</title>
+    <!-- Ana stil dosyası -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Üst navigasyon barı -->
+    <header class="topbar">
+        <div class="container nav">
+            <!-- Marka/Logo alanı -->
+            <a href="index.html">
+                <div class="brand">Aurora Travel</div>
+            </a>
+
+            <!-- Menü bağlantıları -->
+            <nav class="menu" id="menu">
+                <!-- Aktif sayfa vurgusu (bu sayfada "Ana Sayfa" aktif bırakılmış) -->
+                <a class="active" href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a href="tours.html">Turlar</a>
+                <a href="hotels.html">Otel & Konaklama</a>
+                <a href="booking.html">Rezervasyon</a>
+                <a href="gallery.html">Galeri</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="faq.html">SSS</a>
+
+            </nav>
+
+            <!-- Mobil menü aç/kapa butonu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Blog liste sayfasına geri dönüş linki -->
+            <a class="chip" href="blog.html">← Blog’a Dön</a>
+
+            <!-- Sayfa düzeni: sol içerik + sağ yan panel -->
+            <div class="detail-grid" style="margin-top:12px;">
+                <!-- LEFT: Blog içeriği -->
+                <article class="card">
+                    <!-- Üst kapak görseli (JS ile değiştiriliyor) -->
+                    <div id="blogHero" class="detail-hero" style="background-image:url('assets/img/slide1.jpg')"></div>
+
+                    <div style="padding:14px 4px 0;">
+                        <!-- Etiket + tarih + okuma süresi -->
+                        <div class="post-meta" style="margin-top:2px;">
+                            <span id="blogBadge" class="badge">Destinasyon</span>
+                            <span id="blogMeta" class="muted">• 12 Aralık 2025 • 4 dk okuma</span>
+                        </div>
+
+                        <!-- Blog başlığı ve giriş metni (JS ile güncelleniyor) -->
+                        <h2 id="blogTitle" style="margin-top:10px;">Başlık</h2>
+                        <p id="blogIntro" class="muted" style="margin-top:8px;">Giriş metni...</p>
+
+                        <!-- Blog ana içerik alanı (JS içerik parçalarını buraya basıyor) -->
+                        <div id="blogContent" class="muted" style="line-height:1.9; margin-top:12px;">
+                            <!-- JS dolduracak -->
+                        </div>
+                    </div>
+                </article>
+
+                <!-- RIGHT: Yan panel / ilgili bağlantılar -->
+                <aside class="card">
+                    <h3>İlgili Bağlantılar</h3>
+                    <p class="muted">Bu yazıyla bağlantılı tura geç veya hızlı rezervasyon yap.</p>
+
+                    <!-- Hızlı yönlendirme butonları -->
+                    <div style="margin-top:12px; display:grid; gap:10px;">
+                        <!-- Bu butonun metni ve linki JS ile değişiyor -->
+                        <a id="relatedTourBtn" class="btn ghost" href="tours.html" style="text-align:center;">Turları
+                            Gör</a>
+                        <a class="btn" href="booking.html" style="text-align:center;">Hızlı Rezervasyon</a>
+                        <a class="btn ghost" href="contact.html" style="text-align:center;">Soru Sor</a>
+                    </div>
+
+                    <!-- Ek bilgi/ipuçları kutusu -->
+                    <div class="card" style="margin-top:14px;">
+                        <h3 style="margin-top:0;">İpucu</h3>
+                        <!-- İpucu metni JS ile güncelleniyor -->
+                        <p class="muted" id="blogTip" style="margin:8px 0 0;">—</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer: telif bilgisi -->
+    <footer class="footer">
+        <div class="container">© 2025 Aurora Travel</div>
+    </footer>
+
+    <script>
+        // Blog içerikleri: URL parametresi (id) ile seçilen içeriği ekrana basar
+        const posts = {
+            kapadokya: {
+                badge: "Destinasyon",
+                meta: "• 12 Aralık 2025 • 4 dk okuma",
+                title: "Kapadokya’da 1 Günde Ne Yapılır?",
+                hero: "assets/img/tour_kapadokya.jpg",
+                intro: "Kapadokya’da kısa sürede maksimum deneyim için pratik bir rota: gün doğumu, vadiler, fotoğraf durakları.",
+                tip: "Gün doğumu için en az 30-40 dk önce vadide ol; ışık inanılmaz fark ediyor.",
+                relatedText: "Kapadokya Turunu Gör",
+                relatedHref: "tour-detail.html?id=kapadokya",
+                // content alanı HTML string listesi; join("") ile birleştirilecek
+                content: [
+                    "<h3>1) Gün Doğumu & Balon İzleme</h3><p>Balona binmesen bile izleme noktaları muazzam. Erken kalk, termosa kahve al.</p>",
+                    "<h3>2) Kısa Vadi Yürüyüşü</h3><p>Güvercinlik / Aşk Vadisi gibi kısa parkurlarla 1-2 saatte güzel bir yürüyüş yaparsın.</p>",                                
+                    "<h3>3) Öğlen – Avanos / Çömlek</h3><p>Avanos’ta kısa bir atölye deneyimi yapabilir veya merkezde dinlenebilirsin.</p>",
+                    "<h3>4) Gün Batımı</h3><p>Gün batımını yüksek bir seyir noktasında bitir. Fotoğraf için altın saat.</p>"
+                ]
+            },
+
+            bilet: {
+                badge: "İpucu",
+                meta: "• 5 Aralık 2025 • 3 dk okuma",
+                title: "Ucuza Bilet Bulmanın 6 Pratik Yolu",
+                hero: "assets/img/slide2.jpg",
+                intro: "Bütçe dostu seyahat için arama taktikleri: esnek tarih, uyarılar, doğru saatler.",
+                tip: "Esnek tarih + yakın havalimanı kombinasyonu fiyatı ciddi düşürür.",
+                relatedText: "Turları Gör",
+                relatedHref: "tours.html",
+                content: [
+                    "<h3>1) Esnek Tarih Kullan</h3><p>1-2 gün oynama bile fiyatı düşürebilir.</p>",
+                    "<h3>2) Fiyat Uyarısı Aç</h3><p>Takip araçlarıyla fiyat düşünce bildirim al.</p>",
+                    "<h3>3) Yakın Havalimanlarını Dene</h3><p>Aynı şehrin farklı havalimanları büyük fark yaratabilir.</p>",
+                    "<h3>4) Çıkış Saatini Değiştir</h3><p>Sabah erken/Gece geç uçuşlar daha uygun olabilir.</p>",
+                    "<h3>5) Aktarmalı Opsiyonlara Bak</h3><p>Bazen 1 aktarma ciddi tasarruf sağlar.</p>",
+                    "<h3>6) Gizli Mod / Çerez</h3><p>Abartma ama bazen fiyat/öneri farkı oluşabiliyor.</p>"
+                ]
+            },
+
+            roma: {
+                badge: "Yurtdışı",
+                meta: "• 27 Kasım 2025 • 5 dk okuma",
+                title: "Roma’da İlk Kez Gidecekler İçin Mini Rehber",
+                hero: "assets/img/tour_roma.jpg",
+                intro: "Roma’da ilk günlerde kaybolmamak için: temel rota, görülmesi gerekenler ve kısa yemek notları.",
+                tip: "Vatikan için biletini mümkünse önceden al; sıra stresini bitirir.",
+                relatedText: "Roma Turunu Gör",
+                relatedHref: "tour-detail.html?id=roma",
+                content: [
+                    "<h3>1) Klasik İlk Gün Rotası</h3><p>Kolezyum → Forum → Piazza Venezia şeklinde ilerleyebilirsin.</p>",
+                    "<h3>2) Vatikan Günü</h3><p>Müzeler ve San Pietro için yarım gün ayır. Erken git.</p>",
+                    "<h3>3) Yürüyerek Keşfet</h3><p>Roma yürüyüş şehri: dar sokaklar ve meydanlar asıl keyif.</p>",
+                    "<h3>4) Nerede Ne Yenir?</h3><p>Yerel trattoria’larda karbonara/amatriciana deneyebilirsin.</p>"
+                ]
+            },
+
+            kas: {
+                badge: "Deniz",
+                meta: "• 10 Kasım 2025 • 4 dk okuma",
+                title: "Kaş’ta En Güzel Koylar",
+                hero: "assets/img/tour_kas.jpg",
+                intro: "Kaş’ta tekne rotaları, yüzme molaları ve fotoğraf için en iyi saatler: kısa ve net bir rehber.",
+                tip: "Deniz en sakin sabah saatlerinde; fotoğraf ve yüzme için ideal.",
+                relatedText: "Kaş Turunu Gör",
+                relatedHref: "tour-detail.html?id=kas",
+                content: [
+                    "<h3>1) Tekne Turu ile Koylar</h3><p>Günlük teknelerle 3-4 farklı koyda yüzme molası yaparsın.</p>",
+                    "<h3>2) Sakin Koy Önerisi</h3><p>Kalabalıktan kaçmak için öğleden önce koylara git.</p>",
+                    "<h3>3) Gün Batımı Noktası</h3><p>Akşamüstü merkez çevresinde yürüyüşle güzel gün batımı yakalanır.</p>"
+                ]
+            }
+        };
+
+        // URL'den id parametresini al (yoksa kapadokya varsayılır)
+        const params = new URLSearchParams(location.search);
+        const id = params.get("id") || "kapadokya";
+        // İlgili post bulunamazsa varsayılan olarak kapadokya kullan
+        const data = posts[id] || posts.kapadokya;
+
+        // Sayfadaki alanları seçilen posta göre doldur
+        document.getElementById("blogBadge").textContent = data.badge;
+        document.getElementById("blogMeta").textContent = data.meta;
+        document.getElementById("blogTitle").textContent = data.title;
+        document.getElementById("blogIntro").textContent = data.intro;
+        document.getElementById("blogHero").style.backgroundImage = `url('${data.hero}')`;
+        document.getElementById("blogTip").textContent = data.tip;
+
+        // Sağdaki "ilgili tur" butonunu güncelle
+        const relatedBtn = document.getElementById("relatedTourBtn");
+        relatedBtn.textContent = data.relatedText;
+        relatedBtn.href = data.relatedHref;
+
+        // İçerik HTML parçalarını birleştirip ekrana bas
+        document.getElementById("blogContent").innerHTML = data.content.join("");
+    </script>
+
+    <script>
+        // Mobil menü aç/kapa işlemi
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

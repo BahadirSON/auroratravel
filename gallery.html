@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Mobil uyumluluk -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Travel | Galeri</title>
+    <!-- Ana stil dosyası -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Üst menü -->
+    <header class="topbar">
+        <div class="container nav">
+            <!-- Marka/Logo -->
+            <a href="index.html">
+                <div class="brand">Aurora Travel</div>
+            </a>
+
+            <!-- Navigasyon linkleri -->
+            <nav class="menu" id="menu">
+                <a class="active" href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a href="tours.html">Turlar</a>
+                <a href="hotels.html">Otel & Konaklama</a>
+                <a href="booking.html">Rezervasyon</a>
+                <a href="gallery.html">Galeri</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="faq.html">SSS</a>
+
+            </nav>
+
+            <!-- Mobil menü butonu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Sayfa başlığı -->
+            <h2>Fotoğraf Galerisi</h2>
+            <p class="muted">Destinasyonlar ve konaklama görsellerinden seçmeler. </p>
+
+            <!-- DEST: destinasyon görselleri -->
+            <h3 id="dest" style="margin-top:18px;">Destinasyon</h3>
+            <!-- Grid yapı: her kart görsel + overlay + link -->
+            <div class="gallery-grid">
+                <a class="g-item" href="tour-detail.html?id=kapadokya">
+                    <img src="assets/img/tour_kapadokya.jpg" alt="Kapadokya">
+                    <div class="g-overlay">
+                        <strong>Kapadokya</strong>
+                        <span class="muted">Balonlar & Vadiler</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="tour-detail.html?id=kas">
+                    <img src="assets/img/tour_kas.jpg" alt="Kaş">
+                    <div class="g-overlay">
+                        <strong>Kaş</strong>
+                        <span class="muted">Koylar & Deniz</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="tour-detail.html?id=karadeniz">
+                    <img src="assets/img/tour_karadeniz.jpg" alt="Karadeniz">
+                    <div class="g-overlay">
+                        <strong>Karadeniz</strong>
+                        <span class="muted">Yaylalar</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="tour-detail.html?id=roma">
+                    <img src="assets/img/tour_roma.jpg" alt="Roma">
+                    <div class="g-overlay">
+                        <strong>Roma</strong>
+                        <span class="muted">Şehir Turu</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="tour-detail.html?id=paris">
+                    <img src="assets/img/tour_paris.jpg" alt="Paris">
+                    <div class="g-overlay">
+                        <strong>Paris</strong>
+                        <span class="muted">Şehir Keşfi</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="tour-detail.html?id=yunan">
+                    <img src="assets/img/tour_yunan.jpg" alt="Yunan Adaları">
+                    <div class="g-overlay">
+                        <strong>Yunan Adaları</strong>
+                        <span class="muted">Ada Kombini</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="tour-detail.html?id=istanbul">
+                    <img src="assets/img/tour_istanbul.jpg" alt="İstanbul">
+                    <div class="g-overlay">
+                        <strong>İstanbul</strong>
+                        <span class="muted">Kültür & Boğaz</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- HOTELS: otel görselleri -->
+            <h3 id="otel" style="margin-top:26px;">Otel</h3>
+            <div class="gallery-grid">
+                <a class="g-item" href="hotels.html">
+                    <img src="assets/img/hotel_cappadocia.jpg" alt="Kapadokya Otel">
+                    <div class="g-overlay">
+                        <strong>Kapadokya Butik</strong>
+                        <span class="muted">Mağara oda konsepti</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="hotels.html">
+                    <img src="assets/img/hotel_cappadocia_2.jpg" alt="Kapadokya Otel 2">
+                    <div class="g-overlay">
+                        <strong>Göreme Konaklama</strong>
+                        <span class="muted">Merkezi konum</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="hotels.html">
+                    <img src="assets/img/hotel_kas.jpg" alt="Kaş Otel">
+                    <div class="g-overlay">
+                        <strong>Kaş Sahil Oteli</strong>
+                        <span class="muted">Plaja yakın</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="hotels.html">
+                    <img src="assets/img/hotel_karadeniz.jpg" alt="Karadeniz Otel">
+                    <div class="g-overlay">
+                        <strong>Yayla Oteli</strong>
+                        <span class="muted">Doğa ile iç içe</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="hotels.html">
+                    <img src="assets/img/hotel_uzungol.jpg" alt="Uzungöl Otel">
+                    <div class="g-overlay">
+                        <strong>Uzungöl Konaklama</strong>
+                        <span class="muted">Göl manzarası</span>
+                    </div>
+                </a>
+
+                <a class="g-item" href="hotels.html">
+                    <img src="assets/img/hotel_roma.jpg" alt="Roma Otel">
+                    <div class="g-overlay">
+                        <strong>Roma Şehir Oteli</strong>
+                        <span class="muted">Merkezi konum</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Alt bilgi -->
+    <footer class="footer">
+        <div class="container">© 2025 Aurora Travel</div>
+    </footer>
+
+    <script>
+        // Mobil menü aç/kapa
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

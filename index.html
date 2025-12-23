@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Travel | Ana Sayfa</title>
+    <!-- Ana stil dosyası -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Üst navigasyon barı -->
+    <header class="topbar">
+        <div class="container nav">
+            <!-- Logo / marka alanı -->
+            <a href="index.html">
+                <div class="brand">Aurora Travel</div>
+            </a>
+
+            <!-- Menü bağlantıları -->
+            <nav class="menu" id="menu">
+                <a class="active" href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a href="tours.html">Turlar</a>
+                <a href="hotels.html">Otel & Konaklama</a>
+                <a href="booking.html">Rezervasyon</a>
+                <a href="gallery.html">Galeri</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="faq.html">SSS</a>
+
+            </nav>
+
+            <!-- Mobil görünüm için hamburger menü butonu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO: ana tanıtım alanı -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <!-- Metin + CTA butonları -->
+                <div class="hero-card">
+                    <span class="badge">2026 Erken Rezervasyon</span>
+                    <h1 style="margin-top:10px;">Hayalindeki rota için tek tıkla turunu seç.</h1>
+                    <p class="muted">
+                        Yurtiçi & yurtdışı turlar, seçilmiş oteller ve hızlı rezervasyon.
+                    </p>
+
+                    <!-- Hızlı aksiyonlar -->
+                    <div class="hero-actions">
+                        <a class="btn" href="tours.html">Turları İncele</a>
+                        <a class="btn" href="booking.html">Hemen Rezervasyon</a>
+                    </div>
+
+                    <!-- Kısa öne çıkan etiketler -->
+                    <div class="hero-mini">
+                        <div class="mini-box">
+                            <div class="muted">Popüler</div>
+                            <strong>Kapadokya</strong>
+                        </div>
+                        <div class="mini-box">
+                            <div class="muted">Yeni</div>
+                            <strong>Kaş</strong>
+                        </div>
+                        <div class="mini-box">
+                            <div class="muted">Yurtdışı</div>
+                            <strong>Roma</strong>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- FEATURED DESTINATIONS: öne çıkan kartlar -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Öne Çıkan Destinasyonlar</h2>
+                        <p class="muted">En popüler rotalardan hızlı seçim yap.</p>
+                    </div>
+                    <a class="chip" href="tours.html">Tüm Turları Gör</a>
+                </div>
+
+                <!-- Tur kartları grid yapısı -->
+                <div class="grid cols-3" style="margin-top:12px;">
+                    <article class="card feature-card">
+                        <div class="feature-top">
+                            <span class="badge">3 Gece</span>
+                            <span class="muted">Yurtiçi</span>
+                        </div>
+                        <h3>İstanbul Kültür Turu</h3>
+                        <p class="muted">Tarihi yarımada, Boğaz, müzeler.</p>
+                        <div class="feature-actions">
+                            <a class="btn" href="tour-detail.html?id=istanbul">Detaya Git</a>
+                            <a class="btn" href="booking.html">Rezervasyon</a>
+                        </div>
+                    </article>
+
+                    <article class="card feature-card">
+                        <div class="feature-top">
+                            <span class="badge">5 Gece</span>
+                            <span class="muted">Yurtdışı</span>
+                        </div>
+                        <h3>Yunan Adaları</h3>
+                        <p class="muted">Mikonos + Santorini kombin tur.</p>
+                        <div class="feature-actions">
+                            <a class="btn" href="tour-detail.html?id=yunan">Detaya Git</a>
+                            <a class="btn" href="booking.html">Rezervasyon</a>
+                        </div>
+                    </article>
+
+                    <article class="card feature-card">
+                        <div class="feature-top">
+                            <span class="badge">4 Gece</span>
+                            <span class="muted">Doğa</span>
+                        </div>
+                        <h3>Karadeniz Yaylalar</h3>
+                        <p class="muted">Yayla havası, doğa, bol fotoğraf.</p>
+                        <div class="feature-actions">
+                            <a class="btn" href="tour-detail.html?id=karadeniz">Detaya Git</a>
+                            <a class="btn" href="booking.html">Rezervasyon</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOME SECTIONS (3 HEADINGS): hızlı yönlendirme blokları -->
+        <section class="section home-sections">
+            <div class="container home-sections-inner">
+
+                <!-- 1) Neden Biz -->
+                <div class="hs-block">
+                    <h2>Neden Biz?</h2>
+                    <p class="muted">
+                        Seçilmiş oteller, şeffaf program ve hızlı destek ile seyahatinizi konforlu hale getiriyoruz.
+                    </p>
+                    <a class="btn" href="about.html">Biz Kimiz?</a>
+                </div>
+
+                <div class="hs-divider"></div>
+
+                <!-- 2) SSS -->
+                <div class="hs-block">
+                    <h2>Sizlere Nasıl Yardımcı Olabiliriz?</h2>
+                    <p class="muted">
+                        Rezervasyon, iptal-iade, vize ve tur detayları gibi en çok sorulan soruların yanıtlarına hızlıca
+                        ulaşın.
+                    </p>
+                    <a class="btn" href="faq.html">SSS’yi Görüntüle</a>
+                </div>
+
+                <div class="hs-divider"></div>
+
+                <!-- 3) İletişim -->
+                <div class="hs-block">
+                    <h2>Bizimle İletişime Geçin</h2>
+                    <p class="muted">
+                        Mail veya WhatsApp üzerinden bize ulaşın, en kısa sürede dönüş yapalım.
+                    </p>
+                    <a class="btn" href="contact.html">İletişime Geç</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: telif ve kısa açıklama -->
+    <footer class="footer">
+        <div class="container">© 2025 Aurora Travel •Turizm sitesi</div>
+    </footer>
+
+    <script>
+        // Mobil menü aç/kapa
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+
+
+
+</body>
+
+</htaz
